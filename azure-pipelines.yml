@@ -30,7 +30,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
