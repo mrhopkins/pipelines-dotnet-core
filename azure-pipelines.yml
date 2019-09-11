@@ -50,3 +50,9 @@ steps:
     nuGetFeedType: 'internal'
     publishVstsFeed: '575e4431-c37b-491a-a161-a3a5a23b27ab'
     allowPackageConflicts: true
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
